@@ -1,0 +1,143 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "zoomed_padding": true,
+  "agent_ui_font_size": 16.0,
+  "show_edit_predictions": false,
+  "agent": {
+    "always_allow_tool_actions": true,
+    "default_profile": "write",
+    "play_sound_when_agent_done": true,
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "claude-sonnet-4"
+    },
+    "model_parameters": []
+  },
+  "agent_servers": {
+    "Qwen CLI": {
+      "command": "qwen",
+      "args": ["--experimental-acp"],
+      "env": {}
+    }
+  },
+  "indent_guides": {
+    "enabled": false
+  },
+  "show_wrap_guides": false,
+  "gutter": {
+    "folds": true
+  },
+  "file_finder": {
+    "modal_max_width": "small"
+  },
+  "scrollbar": {
+    "axes": {
+      "vertical": false,
+      "horizontal": false
+    },
+    "show": "never"
+  },
+  "autoscroll_on_clicks": false,
+  "base_keymap": "VSCode",
+  "autosave": "on_window_change",
+  "rounded_selection": false,
+  "buffer_line_height": "comfortable",
+  "icon_theme": {
+    "mode": "system",
+    "light": "Zed (Default)",
+    "dark": "Zed (Default)"
+  },
+  "outline_panel": {
+    "folder_icons": false,
+    "dock": "left",
+    "button": true
+  },
+  "use_system_window_tabs": false,
+  "bottom_dock_layout": "contained",
+  "preview_tabs": {
+    "enabled": true
+  },
+  "tabs": {
+    "show_close_button": "hover",
+    "show_diagnostics": "off",
+    "file_icons": false,
+    "git_status": true
+  },
+  "tab_bar": {
+    "show_nav_history_buttons": false,
+    "show": true
+  },
+  "title_bar": {
+    "show_menus": false,
+    "show_user_picture": false,
+    "show_onboarding_banner": true,
+    "show_project_items": true,
+    "show_branch_name": true,
+    "show_branch_icon": true
+  },
+  "debugger": {
+    "button": true
+  },
+  "search": {
+    "center_on_match": false,
+    "button": true
+  },
+  "diagnostics": {
+    "button": true
+  },
+  "terminal": {
+    "font_size": 16.0,
+    "dock": "bottom",
+    "scrollbar": {
+      "show": "never"
+    },
+    "copy_on_select": true,
+    "cursor_shape": "bar",
+    "button": true
+  },
+  "status_bar": {
+    "active_language_button": true,
+    "cursor_position_button": false
+  },
+  "project_panel": {
+    "indent_guides": {
+      "show": "never"
+    },
+    "auto_fold_dirs": true,
+    "auto_reveal_entries": true,
+    "git_status": true,
+    "starts_open": false,
+    "entry_spacing": "comfortable",
+    "hide_hidden": false,
+    "hide_root": true,
+    "sticky_scroll": false,
+    "scrollbar": {
+      "show": "never"
+    },
+    "folder_icons": false,
+    "file_icons": false,
+    "button": true
+  },
+  "relative_line_numbers": "enabled",
+  "disable_ai": false,
+  "agent_buffer_font_size": 16.0,
+  "helix_mode": true,
+  "ui_font_family": ".ZedMono",
+  "buffer_font_family": ".ZedMono",
+  "restore_on_startup": "last_session",
+  "vim_mode": true,
+  "ui_font_size": 16.0,
+  "buffer_font_size": 16.0,
+  "theme": {
+    "mode": "system",
+    "light": "Gruvbox Light",
+    "dark": "Gruvbox Dark"
+  }
+}
