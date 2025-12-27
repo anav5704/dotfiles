@@ -1,0 +1,91 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "palette": {
+    "accent": "#B8BB26",
+    "highlight": "#FB4934"
+  },
+  "enable_cursor_positioning": true,
+  "console_title_template": "{{ .UserName }}@{{ .HostName }}",
+  "blocks": [
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "style": "plain",
+          "template": "<p:highlight>{{ .UserName }}@{{ .HostName }}</> ",
+          "type": "session"
+        },
+        {
+          "style": "plain",
+          "options": {
+            "style": "full"
+          },
+          "template": "{{ .Path }} ",
+          "type": "path"
+        },
+        {
+          "options": {
+            "branch_icon": "",
+            "fetch_status": true,
+            "fetch_worktree_count": true
+          },
+          "style": "plain",
+          "foreground": "white",
+          "template": "git(<p:accent>{{ .HEAD }}</>)",
+          "type": "git"
+        },
+        {
+          "style": "plain",
+          "foreground": "white",
+          "template": " docker(<p:accent>{{ .Context }}</>)",
+          "type": "docker"
+        },
+        {
+          "style": "plain",
+          "template": " venv(<p:accent>{{ .Venv }}</>)",
+          "type": "python"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "right",
+      "segments": [
+        {
+          "style": "plain",
+          "foreground": "white",
+          "options": {
+            "time_format": "Kitchen"
+          },
+          "template": "{{ .CurrentDate | date .Format }}",
+          "type": "time"
+        },
+        {
+          "style": "plain",
+          "foreground": "white",
+          "template": " {{ .Percentage }}%",
+          "type": "battery"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "options": {
+            "always_enabled": true
+          },
+          "style": "plain",
+          "template": "<p:accent>\u276f",
+          "type": "status"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "final_space": true,
+  "version": 2
+}
