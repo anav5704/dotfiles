@@ -1,13 +1,18 @@
 font-family = Lilex
-font-style-bold = false
-theme = dark:Atom One Dark,light:Atom One Light
+theme = Gruvbox Dark
 
+font-style-bold = false
+fullscreen = true
+window-vsync = true
 window-padding-balance = true
-window-padding-x = 5
-window-padding-y = 5
+window-show-tab-bar = never
+adjust-cursor-thickness = 3
 
 working-directory = "code"
 
-keybind = ctrl+k=new_tab
-keybind = ctrl+l=next_tab
-keybind = ctrl+h=previous_tab
+keybind = F11=toggle_fullscreen
+keybind = alt+l=next_tab
+keybind = alt+h=previous_tab
+keybind = alt+k=new_tab
+keybind = alt+q=close_tab
+keybind = alt+t=toggle_tab_overview
