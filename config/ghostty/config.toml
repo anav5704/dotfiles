@@ -1,7 +1,8 @@
-font-family = Lilex
+font-family = Lilex Nerd Font
 theme = Gruvbox Dark
 
 font-style-bold = false
+cursor-style = block
 fullscreen = true
 window-vsync = true
 window-padding-balance = true
@@ -16,3 +17,5 @@ keybind = alt+h=previous_tab
 keybind = alt+k=new_tab
 keybind = alt+q=close_tab
 keybind = alt+t=toggle_tab_overview
+
+shell-integration-features = ssh-terminfo,no-cursor
