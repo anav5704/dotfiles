@@ -10,10 +10,13 @@ plugins=(git zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
+alias :q="exit"
+alias :w="source $HOME/.zshrc"
 alias zrc="hx ~/.zshrc"
 alias brc="hx ~/.bashrc"
 alias lg="lazygit"
 alias ff="fastfetch"
-alias q="exit"
+alias p="pnpm"
+alias g="git"
 
 eval "$(starship init zsh)"
