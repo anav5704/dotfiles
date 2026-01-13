@@ -10,17 +10,17 @@ style_user = "#FB4934"
 
 [hostname]
 ssh_only = false
-format = "[$hostname ]($style)"
+format = "[$hostname]($style)"
 style = "#FB4934"
 
 [directory]
 truncation_length = 3
 truncate_to_repo = false
-format = "[$path ]($style)"
+format = "[ $path]($style)"
 style = "white"
 
 [git_branch]
-format = "[git\\(]($style)[$branch](#B8BB26)[\\)]($style)"
+format = "[ git\\(]($style)[$branch](#B8BB26)[\\)]($style)"
 style = "white"
 
 [character]
