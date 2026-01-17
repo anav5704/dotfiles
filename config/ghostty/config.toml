@@ -3,19 +3,29 @@ theme = Gruvbox Dark
 
 font-style-bold = false
 cursor-style = block
+cursor-style-blink = true
 fullscreen = true
 window-vsync = true
 window-padding-balance = true
 window-show-tab-bar = never
-adjust-cursor-thickness = 3
 
 working-directory = "code"
 
 keybind = F11=toggle_fullscreen
-keybind = alt+l=next_tab
-keybind = alt+h=previous_tab
-keybind = alt+k=new_tab
-keybind = alt+q=close_tab
-keybind = alt+t=toggle_tab_overview
+
+keybind = ctrl+shift+l=next_tab
+keybind = ctrl+shift+h=previous_tab
+keybind = ctrl+shift+n=new_tab
+keybind = ctrl+shift+t=toggle_tab_overview
+
+keybind = ctrl+alt+k=new_split:up
+keybind = ctrl+alt+j=new_split:down
+keybind = ctrl+alt+h=new_split:left
+keybind = ctrl+alt+l=new_split:right
+
+keybind = alt+k=goto_split:up
+keybind = alt+j=goto_split:down
+keybind = alt+h=goto_split:left
+keybind = alt+l=goto_split:right
 
 shell-integration-features = ssh-terminfo,no-cursor
