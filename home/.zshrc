@@ -1,7 +1,9 @@
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.npm-global/bin:$PATH"
 export STARSHIP_CONFIG="$HOME/.config/starship/config.toml"
 
+# keybings
 bindkey -e
 bindkey "^p" history-search-backward
 bindkey "^n" history-search-forward
@@ -13,6 +15,7 @@ HISTFILE=$HOME/.zsh_history
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
 
+# zsh options
 setopt appendhistory
 setopt sharehistory
 setopt hist_save_no_dups
@@ -27,6 +30,7 @@ zstyle ':completion:*' menu no
 plugins=(
   sudo
   git
+  ansible
   fzf-tab
   zsh-syntax-highlighting
   zsh-autosuggestions
@@ -34,6 +38,7 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+# general aliases
 alias c="clear"
 alias q="exit"
 alias src="source $HOME/.zshrc"
@@ -44,6 +49,16 @@ alias ff="fastfetch"
 alias cp="copilot"
 alias p="pnpm"
 alias g="git"
+
+# obsidian pull
+ol() {
+  (cd $HOME/Obsidian && gl)
+}
+
+# obsidian push
+op() {
+  (cd $HOME/Obsidian && ga . && gcmsg "sync vault" && gp)
+}
 
 eval "$(starship init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
