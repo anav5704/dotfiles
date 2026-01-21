@@ -1,4 +1,3 @@
-export ZSH="$HOME/.oh-my-zsh"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.npm-global/bin:$PATH"
 export STARSHIP_CONFIG="$HOME/.config/starship/config.toml"
@@ -46,7 +45,7 @@ alias zrc="hx ~/.zshrc"
 alias brc="hx ~/.bashrc"
 alias lg="lazygit"
 alias ff="fastfetch"
-alias cp="copilot"
+alias chat="copilot"
 alias p="pnpm"
 alias g="git"
 
@@ -58,6 +57,11 @@ ol() {
 # obsidian push
 op() {
   (cd $HOME/Obsidian && ga . && gcmsg "sync vault" && gp)
+}
+
+# obsidian status
+ost() {
+  (cd $HOME/Obsidian && gst)
 }
 
 eval "$(starship init zsh)"
