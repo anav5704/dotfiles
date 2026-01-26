@@ -1,5 +1,6 @@
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.npm-global/bin:$PATH"
 export STARSHIP_CONFIG="$HOME/.config/starship/config.toml"
 
@@ -42,6 +43,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # general aliases
+alias al="cat $HOME/.zshrc | grep alias"
 alias c="clear"
 alias q="exit"
 alias src="source $HOME/.zshrc"
@@ -64,17 +66,17 @@ alias d="docker"
 
 # obsidian pull
 ol() {
-  (cd $HOME/Obsidian && gl)
+  (cd $HOME/Obsidian && git pull)
 }
 
 # obsidian push
 op() {
-  (cd $HOME/Obsidian && ga . && gcmsg "sync vault" && gp)
+  (cd $HOME/Obsidian && git add . && git commit -m "sync vault" && git push)
 }
 
 # obsidian status
 ost() {
-  (cd $HOME/Obsidian && gst)
+  (cd $HOME/Obsidian && git status)
 }
 
 eval "$(starship init zsh)"
